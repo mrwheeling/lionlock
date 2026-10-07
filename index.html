@@ -51,7 +51,7 @@ table.log tr.flag td{color:var(--red);font-weight:bold}
 
 <section id="s-reg" class="on">
 <h2>&gt; TEAM REGISTRATION</h2>
-<p class="dim">Enter your access code from the lobby TV, then register your detective team.</p>
+<p class="dim">Enter your access code, then register your detective team.</p>
 <label for="r-code">ACCESS CODE</label><input id="r-code" autocomplete="off" placeholder="___-____-___">
 <label for="r-team">TEAM NAME</label><input id="r-team" maxlength="40" autocomplete="off">
 <p class="dim" id="r-rule">TEAM RULE: exactly 3 detectives. At least one 7th or 8th grader AND at least one 9th-12th grader. The third can be any grade 7-12.</p>
@@ -68,7 +68,7 @@ table.log tr.flag td{color:var(--red);font-weight:bold}
 <p class="dim" id="m-status"></p>
 <div class="menu">
 <button data-go="g1">[1] GATE 1: ENTER LOCATION CODE</button>
-<button data-go="g2">[2] GATE 2: ENTER SERVER ROOM DOOR NUMBER</button>
+<button data-go="g2">[2] GATE 2: ENTER ROOM NUMBER</button>
 <button data-go="locker">[3] EVIDENCE LOCKER</button>
 <button data-go="acc">[4] FILE FINAL ACCUSATION</button>
 </div>
@@ -78,7 +78,7 @@ table.log tr.flag td{color:var(--red);font-weight:bold}
 
 <section id="s-g1">
 <h2>&gt; GATE 1</h2>
-<p class="dim">Enter the room number you recovered from the display case.</p>
+<p class="dim">Enter the room number you decoded.</p>
 <label for="g1-in">ROOM NUMBER</label><input id="g1-in" autocomplete="off">
 <button id="g1-go">UNLOCK</button><button data-go="menu">BACK</button>
 <div class="msg" id="g1-msg"></div>
@@ -87,8 +87,8 @@ table.log tr.flag td{color:var(--red);font-weight:bold}
 
 <section id="s-g2">
 <h2>&gt; GATE 2</h2>
-<p class="dim">Enter the room number of the server room.</p>
-<label for="g2-in">SERVER ROOM NUMBER</label><input id="g2-in" autocomplete="off">
+<p class="dim">Enter the room number you worked out.</p>
+<label for="g2-in">ROOM NUMBER</label><input id="g2-in" autocomplete="off">
 <button id="g2-go">UNLOCK</button><button data-go="menu">BACK</button>
 <div class="msg" id="g2-msg"></div>
 <div id="g2-out" class="scroll"></div>
@@ -104,9 +104,9 @@ table.log tr.flag td{color:var(--red);font-weight:bold}
 <section id="s-acc">
 <h2>&gt; FINAL ACCUSATION</h2>
 <div id="acc-form">
-<p class="dim">You may file <b>one</b> accusation. Check your logbook first. You will get a receipt now. Your teacher will reveal the answer on Day 15.</p>
+<p class="dim">You may file <b>one</b> accusation. Check your logbook first. You will get a receipt now. Your teacher will reveal the answer at the end of Day 14 (Thu Oct 29).</p>
 <label for="a-who">THE INSIDER ACCOMPLICE IS</label><select id="a-who"></select>
-<label for="a-how">HOW WAS THE BADGE COPIED? (WHERE AND WHEN)</label><textarea id="a-how"></textarea>
+<label for="a-how">HOW DID THEY GET THE PRINCIPAL'S ACCESS? (WHERE AND WHEN)</label><textarea id="a-how"></textarea>
 <label for="a-why">WHY DID THEY DO IT?</label><textarea id="a-why"></textarea>
 <label for="a-ev">EVIDENCE SUMMARY (3 PIECES, WITH SOURCES)</label><textarea id="a-ev"></textarea>
 <label for="a-el">WHY ARE THE OTHER SUSPECTS CLEARED?</label><textarea id="a-el"></textarea>
@@ -138,7 +138,7 @@ table.log tr.flag td{color:var(--red);font-weight:bold}
 </div>
 
 <script>
-const D = {"iter": 120000, "reg": "kFIJWhdacfcvapbsnhPJhvO8ZXBRBOrCtDgCtFA6g7wDkSjCSsE9e5UHA8sExA==", "g1": "Y021Hjvd2euuWWSnI3w+jgMeIwf5HYJSOA7lK/sj7OYVsvsT+ekWeZgjsTIQV70Yzrh61N0Rl1UEXLfcrfz6UA3yJuJLGBivACsK0Ecs/zDw4eDQPIV9caBkiHrfLg/lDn/WFSmpUQU1qMVpsxCP5nbEAnMtB3ItvKfkVIzBvyqxeITi1nGA8utQhqYa2NUFo8u1+4oCi37eiirCAM7i4dkwjGTCZPlzOpGRn0HsFn4i8Tv9NitEvLNNhSDCFg2RXEJndTJXwMzKUp5/lm1G3mTfwP4pjNBalu740/Qrn2pFq+uBSC9R52a5m45fY0u0YEJuZC51IS0OkmnR9nhKcl2Bp9ckbDgl2c0p5mlcappYtij7fbvvngoAwf16Yq7b6ku/2Iqdo429lDyUX6fYSbNWv/PyNG2OtHi1D04Jrz4gyLFeWtByG/NEWIq5MPJF+Syu4bVihI57qBDilR0JicF6Xn1Gv4tXIgaVZKiQTr/oc1uGwIH841LImudRrh5rDHVDi6axFU4BYXhnL9U1z5NqJio3wUHXa0DnhBVOFigEvGA+hGdEbMGfBmcU4371x/+EFRuMb7Q0sLyG9c0mO2G9W2ZKnagNI5Mu0z0GGd1WuAOE9OUyr65ybz+D5a+4mUKgTje/oMzzl/Ft+jWbqEm+62DbyPpLXWD5d83KMazwhFMr+IYJY2oZWBUhQixCtq7P85lHY81Nt/8ffzGyZDDvZAKBOg0OySdP/ZlhCZIfu3teV+G45DvriU7Z0OgKescYL5LOwKNlX5eJGX2qqhGlhTLGULDjQvy7G6vC10BuN1jpV0YT6uXryU01pe9N6yTeJoQUgOgLHjaA99qlyFf2j5O1u2S0l2McrbrG6++awE+wy/thCNkuxmLG6n7TywmxpvXLCukNtYihpHrpBYwhHBWhg4ZOS+/ugzJ1jK5H74CcaC5pK4ledM64bQQuPNtNH7i/t0g09OXHpLjPft1lx798qcy3GcehQJzOpZpUtj194M7vA/gwbXr6q+4qOMABMdE0hsh5ulzkcbQkzKomUAb51IF6k4VhxIWCBoBkwTbShLz7lFuEYeJHlHMc1YYsOjOE9lB6VE4MUz/iEXY9u8ra/1hO6cJlKRcabIYG5dzkzQjl2Ew5Dw4w/oObxxMkXBdYF7i0h7zy7AYUVY6kK5VDIAHJZfRTSVNjyG3ISyl6IKDCMDJuoneHbpDFF9Sf1OXthvcbIXLHiOTQYhVbnlReI0ErATFBWosnUNtRUG5qnvBOUjauG6UzNApziewNliIILNLn9lfy3YFh3znLGo4xhqByaToZlE9eEJO9VEUHdgqKB/Acyn6vxN9boRjh7SuhZ4t5hK6+eQKWWxezbvDPwdhQ4AEvr7jn1p3IDFACFCAbCLg9hyuJySeg/H08nlLEeVzL75pWUGde9NLnkFVT/+UifpdyIYJmPJidFlwTkFJS6bLOkzXZRdgWDqBun/QQYGJVe4MyHr7zESiCnUF5P9IyA+1JDTVwdmPUbJT8XelJaScqs8G55Q9DY5WKC8+bZoAjWs9AejnG1Oes9Bc9x00Gk/ZWAzoY/fI=", "g2": "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", "teacher": "nwNeM/A23LBJ0KX5JCMmYbdKq2HGiDNSXuApXCe4KG0inFi1n8UR1t4huG4dNQ==", "roster": ["Mr. Driver (Principal)", "Mrs. Kroschel (Treasurer)", "Mrs. Irwin (Office Manager)", "Mr. Morgan (Math)", "Mr. Wheeling (Science / Technology / Registrar)", "Mr. Betz (Bible)", "Mr. Irwin (PE)", "Mr. Stevenson (7/8 Teacher)"], "endpoint": "https://script.google.com/macros/s/AKfycbxrFxEB_otzhCTF3jj1xTIXavqVTjLlELV4K5mFvyDG38gZRsJM2dEvpm2mPTtKEwny/exec", "game": "Project Override: The Lionlock Protocol"};
+const D = {"iter": 120000, "reg": "bklPWnR91ra/bjNGIKkoRj/RiX/FtbdSqEP/+qG8UgCmHlJD2YcVqJwiUdtPCA==", "g1": "cR2JDkykzrXejDyZsEXUrxb99Y8x5WJsqjFbGDSpbpCe7W9ktb9ZI1WjMSrTqaDO+QvirdbTMb8BjsBFVWP/f9r/laT3ZiCZu/pV+MXzKNkK9kZavhgKuoS/OjJz51n/cephSe7bJmAKJ11qPmq9kfdpSC1Gsaob2aLfM6GNexbwNOZXvJFiItq9KF7eNsVKhj+9xXs4EzIR0vF4tCt3whFhi9xdu4DLerBPHXyvVAbj8NlE76wDgmmEwhqmPvSmqAkHG+wIdcp0LBfK0xpKP6gS+i1BuhQKdGFgAyGSE9y6ODn7mVXk6w5fz2WhZDx3C+vZeE7UFoxuc/uecdDDmRs1gRqhPEHg02dALBJAzdEeOSYvNvT4gyv6aQf4SSHHKplk+K4aMVlIHwHgeIA4ji2UiFot3V1hiW3GJz+jkc0S7NVyQeyLyaOLZfXHs9AQhVdKWGVcZwAuYmULtRJ9WkXOCN4VbHhEAEu5+216Fmw/yYeqA/1nt/tKynf9mVt7GMOd36W1fjwfACWBtNSEBHasBKZ2buHL9iYiYwRIiiwtcIvoRz+7ZSGIZE55U/rxMyIXF3aW4UEfE599eh36csVMnlKyD1deVaEenXDcGOO3/osOHBFcSqZquvpRMU9NlRJ3JpaUcQXR7f7vHPo42VtoRjutPCOJeimBQIee+Nrv1caKBZ28GEYpWqO9Ycfd9cpVmC6B45Z/bQDkemCahleWNfxTQpSNnYPu+9hgtDrHmofv+/PGx5YMXcCg7aOJ9joCeT2+OThU7MSCCT5Wv58vMEy8+LWSISrjwr//ABp3vbkghMSiNdx+2PDITR095bqFcwrl+l8wBtTGvAfsaFOE9pr/QvzYrMz3QbbzePFiystT9HsN71AxjItxrTx+zvttdo5BBN4XikNjDNG+bzk2U0O/KKiZrkYBnIr44QmDcQa1ct5G/EmK3mkNXMi8l0RKiy//usynmJE8tOTMqO1xxr2vWfcvUYeBocurqbzzUFW4vQ0GVXJu8O541E4SnBn5Lz7V/B5aENLKMelnGi88wRzGHJhTUImT9AuElS1qnknijQn/kyPr/0/93SmkEs8jdZXXPfmiiP4VII6NhnfPMffoZOnMYH6jDOl4RzqGCl/JcI4LhhpfgYDLTuO1cJeirmreh8tM92jMRWr5aZyRju0+JTxK0nWezYYa9OL+fgKo1umNWGbgLobOdQ7W3UWOBYlDwaQ1ucIvHKPozujCDbU7rJTwbAopt9NVAx0gmNBYGy82K63HvnQZOPzGJdBLYIyjJj/9oc12cArGX+ceZLl0I7+si/eQYMmN16FRFR8umLyFTwSozyHHz13w9sWjj9ooir6C2vUtphhbSRmBUkhHWMviGQdB9F+s6w9d0ehRKz9+jg7mAeY/G0pP7FEDGRD7cA8IpCJfaonNHbJ0kKwVq6N3TI6vYkbKDlmgmxKJ0zHoxj2Ug9GQ12QtfLqPyA85sfWjy+TJrWzgxn8Qp65+K/o0DpC/y0Jyz7Uld1dwCHLtfZN6omOn5mkdv05awgPDv++L8vDBchPtpLhz9VxJc2yv6hHWKk59+04=", "g2": "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", "teacher": "nMYaTf4ibxMaNL6uu2gBlHSBCnu5PzFMMclCxjs7LCWv5nMe7vZP8W2UDpsj9A==", "roster": ["Mr. Driver (Principal)", "Mrs. Kroschel (Treasurer)", "Mrs. Irwin (Office Manager)", "Mr. Morgan (Math)", "Mr. Wheeling (Science / Technology / Registrar)", "Mr. Betz (Bible)", "Mr. Irwin (PE)", "Mr. Stevenson (7/8 Teacher)"], "endpoint": "https://script.google.com/macros/s/AKfycbxrFxEB_otzhCTF3jj1xTIXavqVTjLlELV4K5mFvyDG38gZRsJM2dEvpm2mPTtKEwny/exec", "game": "Project Override: The Lionlock Protocol"};
 const $ = id => document.getElementById(id);
 const norm = s => (s||"").toUpperCase().replace(/[^A-Z0-9]/g,"");
 let mem = {};
@@ -225,7 +225,7 @@ $("r-go").onclick = async () => {
   if(!name){ m.className="msg err"; m.textContent="GIVE YOUR TEAM A NAME."; return }
   if(!$("r-code").value.trim()){ m.className="msg err"; m.textContent="ENTER THE ACCESS CODE."; return }
   const ok = await decrypt(D.reg, norm($("r-code").value));
-  if(ok !== "OK"){ bad("reg", m, "ACCESS CODE REJECTED. WATCH THE LOBBY TV AGAIN."); return }
+  if(ok !== "OK"){ bad("reg", m, "ACCESS CODE REJECTED. CHECK YOUR NOTES AND TRY AGAIN."); return }
   const members = [1,2,3].map(i => ({name:$("r-m"+i).value.trim(), grade:parseInt($("r-g"+i).value,10)}));
   state.team = {name, members, at:new Date().toISOString()}; save();
   m.className="msg ok"; m.textContent="ACCESS GRANTED. WELCOME, DETECTIVES.";
@@ -238,21 +238,21 @@ $("g1-go").onclick = async () => {
   const m=$("g1-msg"); m.className="msg"; if(!guard("g1",m)) return;
   let n = norm($("g1-in").value); if(n.startsWith("ROOM")) n = n.slice(4); if(n.startsWith("R")) n = n.slice(1);
   const h = await decrypt(D.g1, n);
-  if(h===null){ bad("g1",m,"WRONG CODE. THE DISPLAY CASE POSTER HAS THE ANSWER. DECODE IT AGAIN."); return }
+  if(h===null){ bad("g1",m,"WRONG CODE. CHECK YOUR DECODING AND TRY AGAIN."); return }
   state.g1 = h; save(); m.className="msg ok"; m.textContent="GATE 1 OPEN. EVIDENCE SHEET A UNLOCKED."; renderGate(1);
 };
 $("g2-go").onclick = async () => {
   const m=$("g2-msg"); m.className="msg"; if(!guard("g2",m)) return;
   let n = norm($("g2-in").value); if(n.startsWith("NODE")) n = n.slice(4); if(n.startsWith("ROOM")) n = n.slice(4); if(n.startsWith("R")) n = n.slice(1);
   const h = await decrypt(D.g2, n);
-  if(h===null){ bad("g2",m,"WRONG ROOM. RE-CHECK THE FORMULA AND THE REAL DOOR NUMBERS."); return }
+  if(h===null){ bad("g2",m,"WRONG ROOM. CHECK YOUR WORK AND TRY AGAIN."); return }
   state.g2 = h; save(); m.className="msg ok"; m.textContent="GATE 2 OPEN. EVIDENCE SHEET C UNLOCKED."; renderGate(2);
 };
 function refreshLocker(){
   let h = "";
   if(state.g1) h += state.g1; if(state.g2) h += state.g2;
   if(!h) h = "<p class='dim'>NOTHING UNLOCKED YET. FIND THE CODES, THEN TRY GATE 1 AND GATE 2.</p>";
-  h += "<p class='dim'>Sheets B, D and E are paper clues. They are not stored here.</p>";
+  h += "<p class='dim'>Some clues exist only on paper. They are not stored here.</p>";
   $("lk-out").innerHTML = h;
 }
 $("lk-print").onclick = () => window.print();
